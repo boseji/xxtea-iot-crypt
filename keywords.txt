@@ -6,7 +6,7 @@
 # Datatypes (KEYWORD1)
 ###########################################
 
-xxtea	KEYWORD1	xxtea
+xxtea	KEYWORD1
 
 ###########################################
 # Methods and Functions (KEYWORD2)
