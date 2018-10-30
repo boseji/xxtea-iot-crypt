@@ -1,10 +1,15 @@
-# xxtea-iot-crypt library for Arduino #
+# xxtea Cryptography library for Arduino #
 
 [![Build Status](https://travis-ci.org/boseji/xxtea-iot-crypt.svg?branch=master)]("https://travis-ci.org/boseji/xxtea-iot-crypt")
 
 ## Encryption Library for IoT devices ##
 
 This library implements both RAW data encryption as well as string encryption and decryption for XXTEA.
+
+*Updates 30-10-2018*
+
+* Added long pending fix for libraries
+* Changing repository name
 
 **Updates 18 July 2017**
 
