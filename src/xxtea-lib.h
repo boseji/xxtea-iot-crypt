@@ -9,7 +9,7 @@
 // Thread Safe: No
 // Extendable: Yes
 //
-// @file xxtea-iot-crypt.h
+// @file xxtea-lib.h
 //
 // @brief
 // Library to provide the XXTEA Encryption and Decryption Facility both for
@@ -27,8 +27,8 @@
 // @author boseji - salearj@hotmail.com
 // ---------------------------------------------------------------------------
 
-#ifndef _XXTEA_IOT_CRYPT_H_
-#define _XXTEA_IOT_CRYPT_H_
+#ifndef _XXTEA_LIB_H_
+#define _XXTEA_LIB_H_
 
 #include <stdint.h>
 
@@ -85,4 +85,4 @@ class xxtea_c
 
 extern xxtea_c xxtea;
 
-#endif /* _XXTEA_IOT_CRYPT_H_ */
+#endif /* _XXTEA_LIB_H_ */

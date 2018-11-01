@@ -1,11 +1,11 @@
 /*
 
-  RAW Use example of xxtea-iot-crypt Library
+  RAW Use example of xxtea-lib Cryptographic Library
 
   This example shows the calling convention for the various functions.
 
   For more information about this library please visit us at
-  http://github.com/boseji/xxtea-iot-crypt
+  http://github.com/boseji/xxtea-lib
 
   Created by Abhijit Bose (boseji) on 04/03/16.
   Copyright 2016 - Under creative commons license 3.0:
