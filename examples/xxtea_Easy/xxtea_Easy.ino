@@ -27,6 +27,7 @@ void setup() {
   String plaintext = F("Hi There we can work with this");
 
   // Set the Password
+  // Key for Encrypt - ! Carefull no to more than 16 bytes ! - Or See `Limitations`
   xxtea.setKey("Hello Password");
 
   // Perform Encryption on the Data

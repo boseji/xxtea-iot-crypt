@@ -16,12 +16,13 @@
 
 */
 
-#include <xxtea-iot-crypt.h>
+#include <xxtea-lib.h>
 
 void setup() {
   Serial.begin(115200);
 
   Serial.println();
+  // Key for Encrypt - ! Carefull no to more than 16 bytes ! - Or See `Limitations`
   uint8_t keybuf[] = "Hello Password";
   uint8_t plaintext[] = "Hi There we can work with this";
   uint8_t buffer[200];

@@ -125,10 +125,13 @@ void loop() {}
 ### Limitations ###
 
  * At a time only 80bytes max can be encrypted due to Buffer limitations
- * Modification needed increase the 80byte at `xxtea_iot_crypt.h` file at
-    `line 36`. This indicates the size of the data buffer in Uint32 size location.
+ * Modification needed increase the 80byte at `xxtea_lib.h` file at
+    `line 37`. This indicates the size of the data buffer in Uint32 size location.
     So, for example if the total size is 240 then the value should be 30
     to accommodate.
+ * Maximum key size can only be `16 bytes` that would be 4bytes * 4locations.
+    This can be altered by changing line number `line 38` in the file 
+    `xxtea_lib.h`.
 
 
 ### Dependencies ###
