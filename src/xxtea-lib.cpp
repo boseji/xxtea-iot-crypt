@@ -15,7 +15,8 @@
 // Library to provide the XXTEA Encryption and Decryption Facility both for
 // Raw input and Strings
 //
-// @version API 1.2.1 - Fixed the Signed Arithmetic Problem
+// @version API 2.0.0 - Change in library name and some more documentation
+//              1.2.1 - Fixed the Signed Arithmetic Problem
 //              1.2.0 - Added Travis CI & Fixed redundent code
 //              1.1.0 - Updated the Size inputs and more standard Conversion
 //                      for buffer between the uint32_t and uint8_t types
@@ -26,14 +27,21 @@
 
 #include "xxtea-lib.h"
 
-#include "core/xxtea_internal.h"
+#include "xxtea_core.h"
 
 #include <string.h>
+
+// key Size is always fixed
+#define MAX_XXTEA_KEY8   16
+// 32 Bit
+#define MAX_XXTEA_KEY32  4
+// DWORD Size of Data Buffer
+#define MAX_XXTEA_DATA32 (UINT32CALCBYTE(MAX_XXTEA_DATA8))
 
 static uint32_t xxtea_data[MAX_XXTEA_DATA32];
 static uint32_t xxtea_key[MAX_XXTEA_KEY32];
 
-int xxtea_setup(uint8_t *key, size_t len)
+int xxtea_setup_key(uint8_t *key, size_t len)
 {
   int ret = XXTEA_STATUS_GENERAL_ERROR;
   size_t osz;
@@ -65,7 +73,6 @@ int xxtea_setup(uint8_t *key, size_t len)
     // We have Success
     ret = XXTEA_STATUS_SUCCESS;
   }while(0);
-
   return ret;
 }
 
@@ -146,7 +153,7 @@ bool xxtea_c::setKey(String key)
   if(key.length() <= MAX_XXTEA_KEY8)
   {
     // Setup the Key
-    xxtea_setup((uint8_t *)key.c_str(), key.length());
+    xxtea_setup_key((uint8_t *)key.c_str(), key.length());
     // Say that the Key has been Initialized
     keyset = true;
     return true;

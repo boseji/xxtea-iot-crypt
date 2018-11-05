@@ -19,7 +19,8 @@
 // This is based on the prior work done by Alessandro Pasqualini
 // http://github.com/alessandro1105/XXTEA-Arduino
 //
-// @version API 1.2.0 - Added Travis CI & Fixed redundent code
+// @version API 2.0.0 - Change in library name and some more documentation
+//              1.2.0 - Added Travis CI & Fixed redundent code
 //              1.1.0 - Updated the Size inputs and more standard Conversion
 //                      for buffer between the uint32_t and uint8_t types
 //
@@ -34,15 +35,22 @@
 
 #include <Arduino.h>
 
-#define MAX_XXTEA_DATA32 20
-#define MAX_XXTEA_KEY32  4
-#define MAX_XXTEA_KEY8   (MAX_XXTEA_KEY32 * 4)
-#define MAX_XXTEA_DATA8  (MAX_XXTEA_DATA32 * 4)
+#ifndef MAX_XXTEA_DATA8
+// Maximum Size of Data Buffer in Bytes
+#define MAX_XXTEA_DATA8  80
+#endif
 
+// Status Codes
+
+//!< All is well
 #define XXTEA_STATUS_SUCCESS          0
+//!< Generic Error in failure to execute
 #define XXTEA_STATUS_GENERAL_ERROR    1
+//!< Errors in input parameters
 #define XXTEA_STATUS_PARAMETER_ERROR  2
+//!< Error in Size of either of the buffers
 #define XXTEA_STATUS_SIZE_ERROR       3
+//!< Error in word alignment of the buffer
 #define XXTEA_STATUS_ALIGNMENT_ERROR  4
 
 // Find size of Uint32 array from an input of Byte array size
@@ -66,7 +74,7 @@
  *
  * TODO: Add `__attribute_deprecated__` at end of the functions to be Disabled
  */
-int xxtea_setup(uint8_t *key, size_t len);
+int xxtea_setup_key(uint8_t *key, size_t len);
 
 int xxtea_encrypt(uint8_t *data, size_t len, uint8_t *buf, size_t *maxlen);
 int xxtea_decrypt(uint8_t *data, size_t len);

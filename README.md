@@ -6,6 +6,12 @@
 
 This library implements both RAW data encryption as well as string encryption and decryption for XXTEA.
 
+**Updates 05 Nov 2018**
+* Changed library name
+* Made sensitive definitions private
+* Changed the name of function `xxtea_setup` to `xxtea_setup_key`
+* Core functions now exposed directly so user customization possible
+
 *Updates 30-10-2018*
 
 * Added long pending fix for libraries
@@ -32,7 +38,7 @@ This library implements both RAW data encryption as well as string encryption an
    This online implementation is for an older version of XXTEA with bugs as per
    https://en.wikipedia.org/wiki/XXTEA
    
-   The `xxtea-iot-crypt` uses the latest version updated by *Needham and Wheeler*
+   The `xxtea-lib` uses the latest version updated by *Needham and Wheeler*
    as in https://en.wikipedia.org/wiki/XXTEA
    
    Please use the `golang` version listed below instead
@@ -41,7 +47,7 @@ This library implements both RAW data encryption as well as string encryption an
 ## Example - Easy String based Encryption / Decryption ##
 
 ```arduino
-#include <xxtea-iot-crypt.h>
+#include <xxtea-lib.h>
 
 void setup() {
   Serial.begin(115200);
@@ -72,7 +78,7 @@ void loop() {}
 ## Example - RAW Encryption / Decryption ##
 
 ```arduino
-#include <xxtea-iot-crypt.h>
+#include <xxtea-lib.h>
 
 void setup() {
   Serial.begin(115200);
@@ -125,13 +131,9 @@ void loop() {}
 ### Limitations ###
 
  * At a time only 80bytes max can be encrypted due to Buffer limitations
- * Modification needed increase the 80byte at `xxtea_lib.h` file at
-    `line 37`. This indicates the size of the data buffer in Uint32 size location.
-    So, for example if the total size is 240 then the value should be 30
-    to accommodate.
- * Maximum key size can only be `16 bytes` that would be 4bytes * 4locations.
-    This can be altered by changing line number `line 38` in the file 
-    `xxtea_lib.h`.
+ * Modification needed increase the 80byte at `xxtea_lib.h` file at `line 40`. 
+   This `MAX_XXTEA_DATA8` indicates the size of the data buffer in bytes.
+ * Maximum key size can only be `16 bytes` this is mandate from XXTEA algorithm.
 
 
 ### Dependencies ###

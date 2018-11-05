@@ -11,7 +11,7 @@
   Copyright 2016 - Under creative commons license 3.0:
         Attribution-ShareAlike CC BY-SA
 
-  @version API 1.2.1
+  @version API 2.0.0
   @author boseji - salearj@hotmail.com
 
 */

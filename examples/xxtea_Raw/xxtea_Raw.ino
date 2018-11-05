@@ -11,7 +11,7 @@
   Copyright 2016 - Under creative commons license 3.0:
         Attribution-ShareAlike CC BY-SA
 
-  @version API 1.2.1
+  @version API 2.0.0
   @author boseji - salearj@hotmail.com
 
 */
@@ -29,7 +29,7 @@ void setup() {
   size_t len = 200, i;
 
   // Setup the Key - Once
-  if(xxtea_setup(keybuf, strlen((char *)keybuf)) != XXTEA_STATUS_SUCCESS) {
+  if(xxtea_setup_key(keybuf, strlen((char *)keybuf)) != XXTEA_STATUS_SUCCESS) {
     Serial.println(" Assignment Failed!");
     return;
   }

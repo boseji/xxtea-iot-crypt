@@ -13,7 +13,7 @@ xxtea	KEYWORD1
 # Methods and Functions (KEYWORD2)
 ###########################################
 
-xxtea_setup		KEYWORD2
+xxtea_setup_key		KEYWORD2
 xxtea_encrypt	KEYWORD2
 xxtea_decrypt	KEYWORD2
 setKey	KEYWORD2
@@ -24,9 +24,6 @@ decrypt	KEYWORD2
 # Constants (LITERAL1)
 ###########################################
 
-MAX_XXTEA_DATA32	LITERAL1
-MAX_XXTEA_KEY32	LITERAL1
-MAX_XXTEA_KEY8	LITERAL1
 MAX_XXTEA_DATA8	LITERAL1
 XXTEA_STATUS_SUCCESS	LITERAL1
 XXTEA_STATUS_GENERAL_ERROR	LITERAL1

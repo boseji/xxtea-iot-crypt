@@ -15,13 +15,14 @@
 // Library to provide the XXTEA Encryption and Decryption Facility both for
 // Raw input and Strings
 // 
-// @version API  1.2.1 - Fixed the Signed Arithmetic Problem
+// @version API  2.0.0 - Program now In main to get included for RAW operations
+//               1.2.1 - Fixed the Signed Arithmetic Problem
 //               1.0.0 - Initial Version
 //
 //
 // @author boseji - salearj@hotmail.com
 // ---------------------------------------------------------------------------
-#include "xxtea_internal.h"
+#include "xxtea_core.h"
 
 #define DELTA 0x9e3779b9
 #define MX ((((z>>5)^(y<<2)) + ((y>>3)^(z<<4))) ^ ((sum^y) + (key[(p&3)^e] ^ z)))
