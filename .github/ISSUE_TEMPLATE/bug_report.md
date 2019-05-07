@@ -1,11 +1,24 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+title: Bug report - *Add short descriptor here*
+labels: possible bug
+assignees: boseji
 
 ---
+
+##### Any bug report raised here MUST be submitted according to this template or it will be flagged with 'Not enough information'. No action will be taken till all the prerequisite information is provided. If no information is provided for over a month after the 'Not enough information' label is applied, the issue will be closed.
+
+## Pre-bug report checklist:
+
+Do this checklist before filing an bug report:
+- [ ] Is this something you can **debug and fix**? Send a pull request! Bug fixes and documentation fixes are welcome.
+- [ ] Is this an idea for a feature? Post it as a Feature request. NOT a bug report.
+- [ ] Is this a bug that you cannot fix? Go ahead with filing a bug report below
+
+<hr>
+
+## Bug Report
 
 #### Describe the bug
 _Include a clear and concise description of what the bug is._
@@ -38,6 +51,7 @@ If applicable, add a wiring diagram to help explain your problem
 Add any other context about the problem here.
 
 <hr>
+
 ###### DO NOT DELETE OR EDIT anything below this
 
 <hr>
