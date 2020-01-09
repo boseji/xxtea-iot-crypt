@@ -158,6 +158,8 @@ http://www.movable-type.co.uk/scripts/tea-block.html
 
 Thanks to [***Chris Veness***](http://www.movable-type.co.uk/) for providing us with this library.
 
+**Note**: Use Hex to Base64 converter to match the results at https://base64.guru/converter/encode/hex
+
 #### Golang
 
 We are using the `golang` for verification using the library
