@@ -49,7 +49,7 @@ This library implements both RAW data encryption as well as string encryption an
 
 ## Example - Easy String based Encryption / Decryption ##
 
-```arduino
+```c++
 #include <xxtea-lib.h>
 
 void setup() {
@@ -80,7 +80,7 @@ void loop() {}
 
 ## Example - RAW Encryption / Decryption ##
 
-```arduino
+```c++
 #include <xxtea-lib.h>
 
 void setup() {
@@ -152,7 +152,7 @@ http://github.com/boseji/xxtea-iot-crypt
 
 #### JavaScript
 
-We can use the correct 'js' implementation now for verification with this library.
+We can use the correct `js` implementation now for verification with this library.
 
 http://www.movable-type.co.uk/scripts/tea-block.html
 
