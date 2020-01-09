@@ -6,6 +6,9 @@
 
 This library implements both RAW data encryption as well as string encryption and decryption for XXTEA.
 
+**Updates 09 Jan 2020**
+* Added Javascript verifier
+
 **Updates 05 Nov 2018**
 * Changed library name
 * Made sensitive definitions private
@@ -146,6 +149,16 @@ http://github.com/boseji/xxtea-iot-crypt
 
 
 ### Verification ###
+
+#### JavaScript
+
+We can use the correct 'js' implementation now for verification with this library.
+
+http://www.movable-type.co.uk/scripts/tea-block.html
+
+Thanks to [***Chris Veness***](http://www.movable-type.co.uk/) for providing us with this library.
+
+#### Golang
 
 We are using the `golang` for verification using the library
 https://github.com/hillu/go-xxtea
